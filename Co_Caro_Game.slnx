@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="CaroShare/CaroShare.csproj" />
+  <Project Path="Caro_Clinet/Caro_Clinet.csproj" />
+  <Project Path="Caro_Sever/Caro_Sever.csproj" />
+</Solution>
