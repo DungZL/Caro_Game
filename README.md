@@ -491,42 +491,10 @@ Trên mỗi client:
 │        └─────────────────────────────────────────┘           │
 └──────────────────────────────────────────────────────────────┘
 ```
-
----
-
-## ⚠ Hạn Chế & Hướng Phát Triển
-
-### Hạn chế hiện tại
-
-| # | Hạn chế | Chi tiết |
-|---|---|---|
-| 1 | **Buffer cố định 1024 bytes** | `Share.Receive()` chỉ đọc tối đa 1024 bytes. Nếu tin nhắn dài hơn sẽ bị cắt. |
-| 2 | **Không có framing protocol** | Nhiều tin nhắn có thể dính nhau (TCP là stream-based) hoặc bị tách ra. |
-| 3 | **Không mã hóa** | Dữ liệu truyền dạng plain text, dễ bị đọc/chỉnh sửa. |
-| 4 | **Không có xác thực** | Bất kỳ ai biết IP/Port đều có thể kết nối. |
-| 5 | **Server không kiểm tra logic** | Client có thể gửi nước đi không hợp lệ. |
-| 6 | **Không hỗ trợ phòng chơi** | Chỉ ghép trận ngẫu nhiên, không chọn đối thủ. |
-| 7 | **Không lưu lịch sử** | Kết quả trận đấu không được lưu lại. |
-
-### Hướng phát triển
-
-- 🔐 **Bảo mật:** Thêm mã hóa TLS/SSL cho kết nối
-- 🏠 **Phòng chơi:** Tạo/tham gia phòng riêng bằng mã mời
-- 💾 **Lưu trữ:** Tích hợp database lưu lịch sử trận đấu, bảng xếp hạng
-- 🤖 **AI:** Thêm chế độ chơi với máy (Minimax/Alpha-Beta)
-- 💬 **Chat:** Hệ thống chat trong trận đấu
-- 🎨 **Giao diện:** Nâng cấp UI hiện đại hơn (WPF/MAUI)
-- 📊 **Server nâng cao:** Kiểm tra logic nước đi phía server để chống gian lận
-- 🔄 **Reconnect:** Hỗ trợ tự động kết nối lại khi mất mạng
-
----
-
 ## 📄 Giấy Phép
 
 Dự án được phát triển cho mục đích học tập và nghiên cứu.
 
 ---
 
-> 📝 *Tài liệu được tạo tự động dựa trên phân tích mã nguồn dự án.*
-> 
-> 📅 *Cập nhật lần cuối: 29/06/2026*
+
